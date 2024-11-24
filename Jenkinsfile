@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     tools {
-        jdk 'JDK23'    // Remplacer par votre version de JDK configurée
+        jdk 'JDK17'    // Remplacer par votre version de JDK configurée
         maven 'apache-maven-3.9.9' // Remplacer par votre version de Maven configurée
     }
 
