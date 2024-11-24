@@ -9,20 +9,23 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'mvn clean install'
+                bat 'mvn clean install'
             }
         }
         stage('Test') {
             steps {
-                sh 'mvn test'
+                bat 'mvn test'
             }
         }
         stage('Run') {
             steps {
-                sh 'mvn exec:java'
+                bat 'mvn exec:java'
             }
         }
     }
+
+
+
 
     post {
         success {
