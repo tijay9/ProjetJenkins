@@ -9,17 +9,17 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                bat 'mvn clean install'
+                sh 'mvn clean install'
             }
         }
         stage('Test') {
             steps {
-                bat 'mvn test'
+                sh 'mvn test'
             }
         }
         stage('Run') {
             steps {
-                bat 'mvn exec:java'
+                sh 'mvn exec:java'
             }
         }
     }
