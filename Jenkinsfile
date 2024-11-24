@@ -3,7 +3,7 @@ pipeline {
 
     tools {
         jdk 'JDK23'    // Remplacer par votre version de JDK configurée
-        maven 'Maven3.9.9' // Remplacer par votre version de Maven configurée
+        maven 'apache-maven-3.9.9' // Remplacer par votre version de Maven configurée
     }
 
     stages {
