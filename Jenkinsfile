@@ -1,5 +1,6 @@
 pipeline {
-    agent any
+
+    agent any // Exécute sur n'importe quel agent disponible
 
     tools {
         jdk 'JDK17'    // Remplacer par votre version de JDK configurée
@@ -7,27 +8,28 @@ pipeline {
     }
 
     stages {
-        stage('Build') {
+
+        stage('Build') { // Étape de compilation
             steps {
-                sh 'mvn clean install'
+                bat 'mvn clean install' // Utilise une commande compatible Windows
             }
         }
-        stage('Test') {
+
+        stage('Test') { // Étape de tests
             steps {
-                sh 'mvn test'
+                bat 'mvn test' // Utilise une commande compatible Windows pour exécuter les tests unitaires
             }
         }
-        stage('Run') {
+
+        stage('Run') { // Étape d'exécution
             steps {
-                sh 'mvn exec:java'
+                bat 'mvn exec:java' // Utilise une commande compatible Windows pour lancer l'application
             }
         }
+
     }
 
-
-
-
-    post {
+    post { // Actions après l'exécution de la pipeline
         success {
             echo 'Pipeline exécuté avec succès!'
         }
