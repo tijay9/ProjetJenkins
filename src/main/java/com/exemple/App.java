@@ -6,7 +6,7 @@ public class App {
 
     public String getMessage() {
     
-        return "Hello, encore un test!";
+        return "encore un test!";
     
     }
     
