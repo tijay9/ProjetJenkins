@@ -15,7 +15,11 @@ pipeline {
             }
         }
 
-        
+        stage('Test') { // Étape de tests
+            steps {
+                bat 'mvn test' // Utilise une commande compatible Windows pour exécuter les tests unitaires
+            }
+        }
 
         stage('Run') { // Étape d'exécution
             steps {
